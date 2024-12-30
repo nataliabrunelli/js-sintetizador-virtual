@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sintetizador Virtual</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Sintetizador Virtual</h1>
+      <section>
+        <div>
+          <label for="volume">Volume</label>
+          <input type="range" id="volume" min="0" max="1" value="0.5" step="any">
+        </div>
+        <div>
+          <label for="onda">Onda</label>
+          <select id="onda">
+            <option value="sine">Senoidal</option>
+            <option value="square">Quadrada</option>
+            <option value="sawtooth">Dente de Serra</option>
+            <option value="triangle">Triangular</option>
+          </select>
+        </div>
+        <div>
+          <label for="teclas">Teclas</label>
+          <input type="checkbox" id="teclas" checked>
+        </div>
+      </section>
+    </header>
+
+    <ul class="piano-keys">
+      <li class="keys white" data-key="261.63"><span>a</span></li>
+      <li class="keys black" data-key="277.18"><span>w</span></li>
+      <li class="keys white" data-key="293.66"><span>s</span></li>
+      <li class="keys black" data-key="311.13"><span>e</span></li>
+      <li class="keys white" data-key="329.63"><span>d</span></li>
+      <li class="keys white" data-key="349.23"><span>f</span></li>
+      <li class="keys black" data-key="369.99"><span>t</span></li>
+      <li class="keys white" data-key="392.00"><span>g</span></li>
+      <li class="keys black" data-key="415.30"><span>y</span></li>
+      <li class="keys white" data-key="440.00"><span>h</span></li>
+      <li class="keys black" data-key="466.16"><span>u</span></li>
+      <li class="keys white" data-key="493.88"><span>j</span></li>
+      <li class="keys white" data-key="523.25"><span>k</span></li>
+      <li class="keys black" data-key="554.37"><span>o</span></li>
+      <li class="keys white" data-key="587.33"><span>l</span></li>
+      <li class="keys black" data-key="622.25"><span>p</span></li>
+      <li class="keys white" data-key="659.25"><span>ç</span></li>
+    </ul>
+  </div>
+
+  <script src="./src/js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5f2fd;
+}
+
+.container {
+  width: 780px;
+  padding: 35px 40px;
+  border-radius: 20px;
+  background: #000;
+  color: #e5f2fd;
+}
+
+header h1 {
+  font-family: "Audiowide", serif;
+  font-size: 1.6rem;
+}
+
+header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header div label {
+  font-weight: 500;
+  font-size: 1.19rem;
+}
+
+#volume {
+  accent-color: #e5f2fd;
+}
+
+#teclas {
+  appearance: none;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #4b4b4b;
+  cursor: pointer;
+  position: relative;
+}
+
+#teclas::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #8c8c8c;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+#teclas:checked::before {
+  left: 1.8rem;
+  background-color: #e5f2fd;
+}
+
+#onda {
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #e5f2fd;
+  color: #333;
+  text-align: center;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+}
+
+.piano-keys .keys {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  color: #a2a2a2;
+}
+
+.keys.white {
+  width: 70px;
+  height: 230px;
+  background: linear-gradient(#fff 96%, #e5f2fd 4%);
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.keys.white:active, .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+
+.keys.black {
+  width: 44px;
+  height: 140px;
+  background: linear-gradient(#333, #000);
+  border: 1px solid #000;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  margin: 0 -22px 0 -22px;
+}
+
+.keys.black:active, .black.active {
+  box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom #000, #434343);
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.keys.hide span {
+  display: none;
+}
